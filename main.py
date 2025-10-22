@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import List, Dict, Optional
 import json
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query, Path
 
 
 app = FastAPI(title="Patient Management API")
@@ -57,3 +57,16 @@ def view_patients():
         raise HTTPException(status_code=404, detail="no data found!".title())
     return data
 
+@app.get("/patient/{patient_id}")
+def get_patient_by_id(patient_id: int = Path(...,
+                                              ge=1,
+                                              title="Enter patient id: ",
+                                              description="enter patient id ".title(),
+                                              json_schema_extra={"example": 1})):
+    patients = patient_data["patients"]
+
+    for patient in patients:
+        if patient["patient_id"] == patient_id:
+            return patient
+
+    raise HTTPException(status_code=404, detail=f"given id {patient_id} doesnt exit.!")
