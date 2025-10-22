@@ -70,3 +70,25 @@ def get_patient_by_id(patient_id: int = Path(...,
             return patient
 
     raise HTTPException(status_code=404, detail=f"given id {patient_id} doesnt exit.!")
+
+@app.post("/add")
+def add_patient(new_patient: Patient):
+
+    data = patient_data
+    if "patients" not in data:
+        data["patients"] = []
+
+    # check for duplicates ids
+
+    for patient in data["patients"]:
+        if patient["patient_id"] == new_patient.patient_id:
+            raise HTTPException(status_code=400, detail=f"patient id of {new_patient.patient_id} already exist.")
+
+    # add new patient
+    data["patients"].append(new_patient.model_dump())
+
+    # write to json file to persist changes
+    with open("patient_data_json.json", "w") as f:
+        json.dump(data, f, indent=4)
+
+    return {"message":"new patient has been added/created.".title(), "new patient".title():new_patient}
