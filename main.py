@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import List, Dict, Optional
-
+import json
 
 class Patient(BaseModel):
 
@@ -30,3 +30,11 @@ class Patient(BaseModel):
         "address": "123 MG Road, Mumbai, Maharashtra"}})
 
 
+def load_patient_data():
+
+    with open("patient_data_json.json", mode="r") as f:
+        data = json.load(f)
+
+    return data
+
+patient_data = load_patient_data()
