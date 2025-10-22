@@ -1,12 +1,10 @@
 from pydantic import BaseModel, Field
 from typing import List, Dict, Optional
 import json
-from fastapi import FastAPI
-
+from fastapi import FastAPI, HTTPException
 
 
 app = FastAPI(title="Patient Management API")
-
 
 
 class Patient(BaseModel):
@@ -47,9 +45,15 @@ def load_patient_data():
 patient_data = load_patient_data()
 
 
-
 @app.get("/")
 def homepage():
 
     return {"message":"this is the patient management api homepage".title()}
+
+@app.get("/view")
+def view_patients():
+    data = patient_data
+    if not data:
+        raise HTTPException(status_code=404, detail="no data found!".title())
+    return data
 
