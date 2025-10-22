@@ -1,0 +1,604 @@
+{
+  "patients": [
+    {
+      "patient_id": 1,
+      "name": "Rajesh Kumar",
+      "age": 45,
+      "weight": 78.5,
+      "symptoms": ["fever", "headache", "fatigue"],
+      "contact": {
+        "phone": "+91-9876543210",
+        "email": "rajesh.kumar@email.com",
+        "address": "123 MG Road, Mumbai, Maharashtra"
+      }
+    },
+    {
+      "patient_id": 2,
+      "name": "Priya Sharma",
+      "age": 32,
+      "weight": 62.3,
+      "symptoms": ["cough", "sore throat", "body ache"],
+      "contact": {
+        "phone": "+91-9876543211",
+        "email": "priya.sharma@email.com",
+        "address": "456 Park Street, Kolkata, West Bengal"
+      }
+    },
+    {
+      "patient_id": 3,
+      "name": "Amit Patel",
+      "age": 58,
+      "weight": 85.2,
+      "symptoms": ["chest pain", "shortness of breath", "dizziness"],
+      "contact": {
+        "phone": "+91-9876543212",
+        "email": "amit.patel@email.com",
+        "address": "789 SG Highway, Ahmedabad, Gujarat"
+      }
+    },
+    {
+      "patient_id": 4,
+      "name": "Sneha Reddy",
+      "age": 27,
+      "weight": 55.8,
+      "symptoms": ["nausea", "vomiting", "abdominal pain"],
+      "contact": {
+        "phone": "+91-9876543213",
+        "email": "sneha.reddy@email.com",
+        "address": "321 Banjara Hills, Hyderabad, Telangana"
+      }
+    },
+    {
+      "patient_id": 5,
+      "name": "Vikram Singh",
+      "age": 41,
+      "weight": 92.1,
+      "symptoms": ["back pain", "joint stiffness", "muscle weakness"],
+      "contact": {
+        "phone": "+91-9876543214",
+        "email": "vikram.singh@email.com",
+        "address": "654 Connaught Place, New Delhi, Delhi"
+      }
+    },
+    {
+      "patient_id": 6,
+      "name": "Anita Desai",
+      "age": 53,
+      "weight": 68.7,
+      "symptoms": ["migraine", "sensitivity to light", "nausea"],
+      "contact": {
+        "phone": "+91-9876543215",
+        "email": "anita.desai@email.com",
+        "address": "987 FC Road, Pune, Maharashtra"
+      }
+    },
+    {
+      "patient_id": 7,
+      "name": "Rohan Mehta",
+      "age": 35,
+      "weight": 74.3,
+      "symptoms": ["insomnia", "anxiety", "restlessness"],
+      "contact": {
+        "phone": "+91-9876543216",
+        "email": "rohan.mehta@email.com",
+        "address": "147 Brigade Road, Bangalore, Karnataka"
+      }
+    },
+    {
+      "patient_id": 8,
+      "name": "Kavita Iyer",
+      "age": 29,
+      "weight": 58.9,
+      "symptoms": ["skin rash", "itching", "redness"],
+      "contact": {
+        "phone": "+91-9876543217",
+        "email": "kavita.iyer@email.com",
+        "address": "258 Anna Salai, Chennai, Tamil Nadu"
+      }
+    },
+    {
+      "patient_id": 9,
+      "name": "Sanjay Gupta",
+      "age": 62,
+      "weight": 88.5,
+      "symptoms": ["frequent urination", "excessive thirst", "blurred vision"],
+      "contact": {
+        "phone": "+91-9876543218",
+        "email": "sanjay.gupta@email.com",
+        "address": "369 Mall Road, Shimla, Himachal Pradesh"
+      }
+    },
+    {
+      "patient_id": 10,
+      "name": "Meera Nair",
+      "age": 38,
+      "weight": 64.2,
+      "symptoms": ["fatigue", "weight gain", "cold intolerance"],
+      "contact": {
+        "phone": "+91-9876543219",
+        "email": "meera.nair@email.com",
+        "address": "741 MG Road, Kochi, Kerala"
+      }
+    },
+    {
+      "patient_id": 11,
+      "name": "Arjun Kapoor",
+      "age": 24,
+      "weight": 70.5,
+      "symptoms": ["runny nose", "sneezing", "watery eyes"],
+      "contact": {
+        "phone": "+91-9876543220",
+        "email": "arjun.kapoor@email.com",
+        "address": "852 Mall Road, Amritsar, Punjab"
+      }
+    },
+    {
+      "patient_id": 12,
+      "name": "Deepa Joshi",
+      "age": 47,
+      "weight": 71.8,
+      "symptoms": ["heartburn", "acid reflux", "bloating"],
+      "contact": {
+        "phone": "+91-9876543221",
+        "email": "deepa.joshi@email.com",
+        "address": "963 Civil Lines, Jaipur, Rajasthan"
+      }
+    },
+    {
+      "patient_id": 13,
+      "name": "Karan Malhotra",
+      "age": 31,
+      "weight": 82.3,
+      "symptoms": ["ear pain", "hearing loss", "tinnitus"],
+      "contact": {
+        "phone": "+91-9876543222",
+        "email": "karan.malhotra@email.com",
+        "address": "159 Sector 17, Chandigarh, Punjab"
+      }
+    },
+    {
+      "patient_id": 14,
+      "name": "Pooja Saxena",
+      "age": 44,
+      "weight": 66.4,
+      "symptoms": ["mood swings", "irritability", "hot flashes"],
+      "contact": {
+        "phone": "+91-9876543223",
+        "email": "pooja.saxena@email.com",
+        "address": "357 Gomti Nagar, Lucknow, Uttar Pradesh"
+      }
+    },
+    {
+      "patient_id": 15,
+      "name": "Rahul Verma",
+      "age": 55,
+      "weight": 95.7,
+      "symptoms": ["swollen ankles", "leg pain", "varicose veins"],
+      "contact": {
+        "phone": "+91-9876543224",
+        "email": "rahul.verma@email.com",
+        "address": "468 Hazratganj, Lucknow, Uttar Pradesh"
+      }
+    },
+    {
+      "patient_id": 16,
+      "name": "Simran Kaur",
+      "age": 26,
+      "weight": 59.2,
+      "symptoms": ["irregular periods", "cramps", "mood changes"],
+      "contact": {
+        "phone": "+91-9876543225",
+        "email": "simran.kaur@email.com",
+        "address": "579 Model Town, Ludhiana, Punjab"
+      }
+    },
+    {
+      "patient_id": 17,
+      "name": "Anil Bhatt",
+      "age": 50,
+      "weight": 79.6,
+      "symptoms": ["jaw pain", "tooth sensitivity", "gum bleeding"],
+      "contact": {
+        "phone": "+91-9876543226",
+        "email": "anil.bhatt@email.com",
+        "address": "680 Paltan Bazaar, Dehradun, Uttarakhand"
+      }
+    },
+    {
+      "patient_id": 18,
+      "name": "Neha Agarwal",
+      "age": 33,
+      "weight": 61.5,
+      "symptoms": ["hair loss", "dry skin", "brittle nails"],
+      "contact": {
+        "phone": "+91-9876543227",
+        "email": "neha.agarwal@email.com",
+        "address": "791 Sadar Bazaar, Nagpur, Maharashtra"
+      }
+    },
+    {
+      "patient_id": 19,
+      "name": "Manish Trivedi",
+      "age": 39,
+      "weight": 86.9,
+      "symptoms": ["snoring", "daytime sleepiness", "morning headaches"],
+      "contact": {
+        "phone": "+91-9876543228",
+        "email": "manish.trivedi@email.com",
+        "address": "802 Alkapuri, Vadodara, Gujarat"
+      }
+    },
+    {
+      "patient_id": 20,
+      "name": "Ritu Bose",
+      "age": 48,
+      "weight": 72.1,
+      "symptoms": ["memory problems", "confusion", "difficulty concentrating"],
+      "contact": {
+        "phone": "+91-9876543229",
+        "email": "ritu.bose@email.com",
+        "address": "913 Salt Lake, Kolkata, West Bengal"
+      }
+    },
+    {
+      "patient_id": 21,
+      "name": "Suresh Rao",
+      "age": 67,
+      "weight": 81.4,
+      "symptoms": ["tremors", "stiffness", "slow movement"],
+      "contact": {
+        "phone": "+91-9876543230",
+        "email": "suresh.rao@email.com",
+        "address": "124 Koramangala, Bangalore, Karnataka"
+      }
+    },
+    {
+      "patient_id": 22,
+      "name": "Anjali Chopra",
+      "age": 30,
+      "weight": 57.3,
+      "symptoms": ["wheezing", "chest tightness", "difficulty breathing"],
+      "contact": {
+        "phone": "+91-9876543231",
+        "email": "anjali.chopra@email.com",
+        "address": "235 Defence Colony, New Delhi, Delhi"
+      }
+    },
+    {
+      "patient_id": 23,
+      "name": "Prakash Pillai",
+      "age": 52,
+      "weight": 90.8,
+      "symptoms": ["numbness in hands", "tingling in feet", "burning sensation"],
+      "contact": {
+        "phone": "+91-9876543232",
+        "email": "prakash.pillai@email.com",
+        "address": "346 Vyttila, Kochi, Kerala"
+      }
+    },
+    {
+      "patient_id": 24,
+      "name": "Divya Menon",
+      "age": 28,
+      "weight": 54.6,
+      "symptoms": ["palpitations", "sweating", "panic attacks"],
+      "contact": {
+        "phone": "+91-9876543233",
+        "email": "divya.menon@email.com",
+        "address": "457 Kakkanad, Kochi, Kerala"
+      }
+    },
+    {
+      "patient_id": 25,
+      "name": "Gaurav Mishra",
+      "age": 43,
+      "weight": 83.2,
+      "symptoms": ["muscle cramps", "weakness", "spasms"],
+      "contact": {
+        "phone": "+91-9876543234",
+        "email": "gaurav.mishra@email.com",
+        "address": "568 Indira Nagar, Bangalore, Karnataka"
+      }
+    },
+    {
+      "patient_id": 26,
+      "name": "Lakshmi Krishnan",
+      "age": 56,
+      "weight": 69.5,
+      "symptoms": ["bone pain", "fractures", "loss of height"],
+      "contact": {
+        "phone": "+91-9876543235",
+        "email": "lakshmi.krishnan@email.com",
+        "address": "679 T Nagar, Chennai, Tamil Nadu"
+      }
+    },
+    {
+      "patient_id": 27,
+      "name": "Harsh Goel",
+      "age": 36,
+      "weight": 77.9,
+      "symptoms": ["vision problems", "eye strain", "double vision"],
+      "contact": {
+        "phone": "+91-9876543236",
+        "email": "harsh.goel@email.com",
+        "address": "780 Cyber City, Gurgaon, Haryana"
+      }
+    },
+    {
+      "patient_id": 28,
+      "name": "Nidhi Bansal",
+      "age": 25,
+      "weight": 52.8,
+      "symptoms": ["acne", "oily skin", "hormonal imbalance"],
+      "contact": {
+        "phone": "+91-9876543237",
+        "email": "nidhi.bansal@email.com",
+        "address": "891 South Extension, New Delhi, Delhi"
+      }
+    },
+    {
+      "patient_id": 29,
+      "name": "Ramesh Kulkarni",
+      "age": 61,
+      "weight": 87.3,
+      "symptoms": ["prostate issues", "urinary difficulty", "lower back pain"],
+      "contact": {
+        "phone": "+91-9876543238",
+        "email": "ramesh.kulkarni@email.com",
+        "address": "902 Shivaji Nagar, Pune, Maharashtra"
+      }
+    },
+    {
+      "patient_id": 30,
+      "name": "Tanvi Shah",
+      "age": 34,
+      "weight": 63.7,
+      "symptoms": ["thyroid nodules", "neck swelling", "hoarseness"],
+      "contact": {
+        "phone": "+91-9876543239",
+        "email": "tanvi.shah@email.com",
+        "address": "113 Bodakdev, Ahmedabad, Gujarat"
+      }
+    },
+    {
+      "patient_id": 31,
+      "name": "Ashok Reddy",
+      "age": 49,
+      "weight": 91.5,
+      "symptoms": ["high blood pressure", "headache", "nosebleeds"],
+      "contact": {
+        "phone": "+91-9876543240",
+        "email": "ashok.reddy@email.com",
+        "address": "224 Jubilee Hills, Hyderabad, Telangana"
+      }
+    },
+    {
+      "patient_id": 32,
+      "name": "Shweta Sinha",
+      "age": 37,
+      "weight": 65.9,
+      "symptoms": ["anemia", "pale skin", "weakness"],
+      "contact": {
+        "phone": "+91-9876543241",
+        "email": "shweta.sinha@email.com",
+        "address": "335 Boring Road, Patna, Bihar"
+      }
+    },
+    {
+      "patient_id": 33,
+      "name": "Mohit Jain",
+      "age": 42,
+      "weight": 84.6,
+      "symptoms": ["kidney stones", "flank pain", "blood in urine"],
+      "contact": {
+        "phone": "+91-9876543242",
+        "email": "mohit.jain@email.com",
+        "address": "446 C Scheme, Jaipur, Rajasthan"
+      }
+    },
+    {
+      "patient_id": 34,
+      "name": "Priyanka Das",
+      "age": 31,
+      "weight": 60.4,
+      "symptoms": ["depression", "loss of appetite", "insomnia"],
+      "contact": {
+        "phone": "+91-9876543243",
+        "email": "priyanka.das@email.com",
+        "address": "557 Ballygunge, Kolkata, West Bengal"
+      }
+    },
+    {
+      "patient_id": 35,
+      "name": "Varun Khanna",
+      "age": 54,
+      "weight": 93.2,
+      "symptoms": ["liver problems", "jaundice", "fatigue"],
+      "contact": {
+        "phone": "+91-9876543244",
+        "email": "varun.khanna@email.com",
+        "address": "668 Greater Kailash, New Delhi, Delhi"
+      }
+    },
+    {
+      "patient_id": 36,
+      "name": "Isha Pandey",
+      "age": 23,
+      "weight": 56.1,
+      "symptoms": ["eating disorder", "weight loss", "dizziness"],
+      "contact": {
+        "phone": "+91-9876543245",
+        "email": "isha.pandey@email.com",
+        "address": "779 Aliganj, Lucknow, Uttar Pradesh"
+      }
+    },
+    {
+      "patient_id": 37,
+      "name": "Sandeep Kumar",
+      "age": 46,
+      "weight": 80.7,
+      "symptoms": ["gallstones", "upper abdominal pain", "nausea"],
+      "contact": {
+        "phone": "+91-9876543246",
+        "email": "sandeep.kumar@email.com",
+        "address": "880 Frazer Town, Bangalore, Karnataka"
+      }
+    },
+    {
+      "patient_id": 38,
+      "name": "Madhuri Deshmukh",
+      "age": 40,
+      "weight": 67.8,
+      "symptoms": ["vertigo", "balance problems", "nausea"],
+      "contact": {
+        "phone": "+91-9876543247",
+        "email": "madhuri.deshmukh@email.com",
+        "address": "991 Deccan, Pune, Maharashtra"
+      }
+    },
+    {
+      "patient_id": 39,
+      "name": "Aditya Rao",
+      "age": 29,
+      "weight": 75.4,
+      "symptoms": ["sports injury", "knee pain", "swelling"],
+      "contact": {
+        "phone": "+91-9876543248",
+        "email": "aditya.rao@email.com",
+        "address": "102 Indiranagar, Bangalore, Karnataka"
+      }
+    },
+    {
+      "patient_id": 40,
+      "name": "Riya Chatterjee",
+      "age": 35,
+      "weight": 62.9,
+      "symptoms": ["endometriosis", "pelvic pain", "heavy bleeding"],
+      "contact": {
+        "phone": "+91-9876543249",
+        "email": "riya.chatterjee@email.com",
+        "address": "213 Park Street, Kolkata, West Bengal"
+      }
+    },
+    {
+      "patient_id": 41,
+      "name": "Naveen Patil",
+      "age": 57,
+      "weight": 89.1,
+      "symptoms": ["gout", "joint inflammation", "toe pain"],
+      "contact": {
+        "phone": "+91-9876543250",
+        "email": "naveen.patil@email.com",
+        "address": "324 Viman Nagar, Pune, Maharashtra"
+      }
+    },
+    {
+      "patient_id": 42,
+      "name": "Swati Bhardwaj",
+      "age": 33,
+      "weight": 58.5,
+      "symptoms": ["chronic fatigue", "joint pain", "brain fog"],
+      "contact": {
+        "phone": "+91-9876543251",
+        "email": "swati.bhardwaj@email.com",
+        "address": "435 Vasant Vihar, New Delhi, Delhi"
+      }
+    },
+    {
+      "patient_id": 43,
+      "name": "Vishal Sood",
+      "age": 44,
+      "weight": 86.3,
+      "symptoms": ["sleep apnea", "loud snoring", "fatigue"],
+      "contact": {
+        "phone": "+91-9876543252",
+        "email": "vishal.sood@email.com",
+        "address": "546 Sector 15, Noida, Uttar Pradesh"
+      }
+    },
+    {
+      "patient_id": 44,
+      "name": "Preeti Singh",
+      "age": 38,
+      "weight": 64.6,
+      "symptoms": ["PCOS", "irregular cycles", "weight gain"],
+      "contact": {
+        "phone": "+91-9876543253",
+        "email": "preeti.singh@email.com",
+        "address": "657 Boring Canal Road, Patna, Bihar"
+      }
+    },
+    {
+      "patient_id": 45,
+      "name": "Manoj Tiwari",
+      "age": 51,
+      "weight": 88.9,
+      "symptoms": ["coronary artery disease", "chest discomfort", "fatigue"],
+      "contact": {
+        "phone": "+91-9876543254",
+        "email": "manoj.tiwari@email.com",
+        "address": "768 Cantonment, Varanasi, Uttar Pradesh"
+      }
+    },
+    {
+      "patient_id": 46,
+      "name": "Shalini Nambiar",
+      "age": 27,
+      "weight": 55.2,
+      "symptoms": ["UTI", "burning urination", "frequent urination"],
+      "contact": {
+        "phone": "+91-9876543255",
+        "email": "shalini.nambiar@email.com",
+        "address": "879 Adyar, Chennai, Tamil Nadu"
+      }
+    },
+    {
+      "patient_id": 47,
+      "name": "Abhishek Malhotra",
+      "age": 32,
+      "weight": 76.8,
+      "symptoms": ["herniated disc", "sciatica", "leg numbness"],
+      "contact": {
+        "phone": "+91-9876543256",
+        "email": "abhishek.malhotra@email.com",
+        "address": "980 Golf Course Road, Gurgaon, Haryana"
+      }
+    },
+    {
+      "patient_id": 48,
+      "name": "Nisha Reddy",
+      "age": 41,
+      "weight": 70.3,
+      "symptoms": ["fibromyalgia", "widespread pain", "fatigue"],
+      "contact": {
+        "phone": "+91-9876543257",
+        "email": "nisha.reddy@email.com",
+        "address": "191 Kondapur, Hyderabad, Telangana"
+      }
+    },
+    {
+      "patient_id": 49,
+      "name": "Siddharth Joshi",
+      "age": 48,
+      "weight": 82.5,
+      "symptoms": ["peptic ulcer", "stomach pain", "heartburn"],
+      "contact": {
+        "phone": "+91-9876543258",
+        "email": "siddharth.joshi@email.com",
+        "address": "202 Baner, Pune, Maharashtra"
+      }
+    },
+    {
+      "patient_id": 50,
+      "name": "Kritika Kapoor",
+      "age": 26,
+      "weight": 53.9,
+      "symptoms": ["migraine", "aura", "light sensitivity"],
+      "contact": {
+        "phone": "+91-9876543259",
+        "email": "kritika.kapoor@email.com",
+        "address": "313 Saket, New Delhi, Delhi"
+      }
+    }
+  ]
+}
