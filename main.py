@@ -60,7 +60,6 @@ def view_patients():
 @app.get("/patient/{patient_id}")
 def get_patient_by_id(patient_id: int = Path(...,
                                               ge=1,
-                                              title="Enter patient id: ",
                                               description="enter patient id ".title(),
                                               json_schema_extra={"example": 1})):
     patients = patient_data["patients"]
@@ -69,7 +68,7 @@ def get_patient_by_id(patient_id: int = Path(...,
         if patient["patient_id"] == patient_id:
             return patient
 
-    raise HTTPException(status_code=404, detail=f"given id {patient_id} doesnt exit.!")
+    raise HTTPException(status_code=404, detail=f"given id {patient_id} doesnt exit.!".title())
 
 @app.post("/add")
 def add_patient(new_patient: Patient):
@@ -82,7 +81,7 @@ def add_patient(new_patient: Patient):
 
     for patient in data["patients"]:
         if patient["patient_id"] == new_patient.patient_id:
-            raise HTTPException(status_code=400, detail=f"patient id of {new_patient.patient_id} already exist.")
+            raise HTTPException(status_code=400, detail=f"patient id of {new_patient.patient_id} already exist.".title())
 
     # add new patient
     data["patients"].append(new_patient.model_dump())
@@ -92,3 +91,20 @@ def add_patient(new_patient: Patient):
         json.dump(data, f, indent=4)
 
     return {"message":"new patient has been added/created.".title(), "new patient".title():new_patient}
+
+@app.delete("/patients/{patient_id}")
+def delete_patient(patient_id: int = Path(...,
+                                          description="enter patient id ".title(),
+                                          json_schema_extra={"example": 10})):
+
+    # check for patient id to delete
+    for i , patient in enumerate(patient_data["patients"]):
+        if patient["patient_id"] == patient_id:
+            patient_data["patients"].pop(i)
+            return {"message":f"patient {patient_id} deleted!"}
+    # if patient id doesnt found
+    raise HTTPException(status_code=404, detail="Patient not found".title())
+
+     #updating the deleted from json file
+    with open("patient_data_json.json", "w") as f:
+        json.dump(patient_data, f, indent=4)
