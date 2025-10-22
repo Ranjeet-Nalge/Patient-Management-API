@@ -1,6 +1,13 @@
 from pydantic import BaseModel, Field
 from typing import List, Dict, Optional
 import json
+from fastapi import FastAPI
+
+
+
+app = FastAPI(title="Patient Management API")
+
+
 
 class Patient(BaseModel):
 
@@ -38,3 +45,11 @@ def load_patient_data():
     return data
 
 patient_data = load_patient_data()
+
+
+
+@app.get("/")
+def homepage():
+
+    return {"message":"this is the patient management api homepage".title()}
+
