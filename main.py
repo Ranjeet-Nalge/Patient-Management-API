@@ -3,24 +3,22 @@ from typing import List, Dict, Optional
 import json
 from fastapi import FastAPI, HTTPException, Query, Path
 
-
 app = FastAPI(title="Patient Management API")
 
 
 class Patient(BaseModel):
-
     patient_id: int = Field(...,
                             gt=1,
                             description="ID of the patient",
-                            json_schema_extra={"example":10})
+                            json_schema_extra={"example": 10})
     name: str = Field(...,
                       description="Name of the patient",
-                      json_schema_extra={"example":"Your Name"})
+                      json_schema_extra={"example": "Your Name"})
     age: int = Field(...,
                      description="Age of the patient",
                      ge=1,
                      le=120,
-                     json_schema_extra={"example":30})
+                     json_schema_extra={"example": 30})
     weight: float = Field(...,
                           description="Weight of the patient",
                           json_schema_extra={"example": 50.50})
@@ -28,27 +26,27 @@ class Patient(BaseModel):
                                 description="symptoms of the patients",
                                 min_length=1,
                                 max_length=5,
-                                json_schema_extra={"example":["fever", "cough"]})
-    contact : Dict[str, str] = Field(...,
-                                     max_length=3,
-                                     json_schema_extra={"example": {"phone": "+91-9876543210",
-        "address": "123 MG Road, Mumbai, Maharashtra"}})
+                                json_schema_extra={"example": ["fever", "cough"]})
+    contact: Dict[str, str] = Field(...,
+                                    max_length=3,
+                                    json_schema_extra={"example": {"phone": "+91-9876543210",
+                                                                   "address": "123 MG Road, Mumbai, Maharashtra"}})
 
 
 def load_patient_data():
-
     with open("patient_data_json.json", mode="r") as f:
         data = json.load(f)
 
     return data
+
 
 patient_data = load_patient_data()
 
 
 @app.get("/")
 def homepage():
+    return {"message": "this is the patient management api homepage".title()}
 
-    return {"message":"this is the patient management api homepage".title()}
 
 @app.get("/view")
 def view_patients():
@@ -57,11 +55,12 @@ def view_patients():
         raise HTTPException(status_code=404, detail="no data found!".title())
     return data
 
+
 @app.get("/patient/{patient_id}")
 def get_patient_by_id(patient_id: int = Path(...,
-                                              ge=1,
-                                              description="enter patient id ".title(),
-                                              json_schema_extra={"example": 1})):
+                                             ge=1,
+                                             description="enter patient id ".title(),
+                                             json_schema_extra={"example": 1})):
     patients = patient_data["patients"]
 
     for patient in patients:
@@ -70,9 +69,9 @@ def get_patient_by_id(patient_id: int = Path(...,
 
     raise HTTPException(status_code=404, detail=f"given id {patient_id} doesnt exit.!".title())
 
+
 @app.post("/add")
 def add_patient(new_patient: Patient):
-
     data = patient_data
     if "patients" not in data:
         data["patients"] = []
@@ -90,21 +89,34 @@ def add_patient(new_patient: Patient):
     with open("patient_data_json.json", "w") as f:
         json.dump(data, f, indent=4)
 
-    return {"message":"new patient has been added/created.".title(), "new patient".title():new_patient}
+    return {"message": "new patient has been added/created.".title(), "new patient".title(): new_patient}
+
 
 @app.delete("/patients/{patient_id}")
 def delete_patient(patient_id: int = Path(...,
                                           description="enter patient id ".title(),
                                           json_schema_extra={"example": 10})):
-
     # check for patient id to delete
-    for i , patient in enumerate(patient_data["patients"]):
+    for i, patient in enumerate(patient_data["patients"]):
         if patient["patient_id"] == patient_id:
             patient_data["patients"].pop(i)
-            return {"message":f"patient {patient_id} deleted!"}
+            return {"message": f"patient {patient_id} deleted!"}
     # if patient id doesnt found
     raise HTTPException(status_code=404, detail="Patient not found".title())
 
-     #updating the deleted from json file
+
+@app.put("/update/{patient_id}")
+def update_patient(patient_id: int, updated_patient: Patient):
+
+    for patient in patient_data["patients"]:
+        if patient["patient_id"] == patient_id:
+            update_fields = updated_patient.model_dump(exclude_unset=True)
+            patient.update(update_fields)
+            save_patient_data(patient_data)
+            return {"message": f"Patient {patient_id} updated successfully"}
+    raise HTTPException(status_code=404, detail="Patient not found")
+
+
+def save_patient_data(data):
     with open("patient_data_json.json", "w") as f:
-        json.dump(patient_data, f, indent=4)
+        json.dump(data, f, indent=4)

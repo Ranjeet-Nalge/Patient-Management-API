@@ -828,6 +828,35 @@
                 "address": "123 MG Road, dubai, saudi",
                 "phone": "+91-9876543210"
             }
+        },
+        {
+            "patient_id": 10,
+            "name": "Your Name",
+            "age": 40,
+            "weight": 50.5,
+            "symptoms": [
+                "fever",
+                "cough"
+            ],
+            "contact": {
+                "address": "123 MG Road, Mumbai, Maharashtra",
+                "phone": "+91-9876543210"
+            }
+        },
+        {
+            "patient_id": 856,
+            "name": "someone onesome",
+            "age": 120,
+            "weight": 60.0,
+            "symptoms": [
+                "upeer stomach ache",
+                "mild heacdaches",
+                "sleep deprived"
+            ],
+            "contact": {
+                "address": "123 MG Road, amdika, china",
+                "phone": "+91-9876543210"
+            }
         }
     ]
 }
