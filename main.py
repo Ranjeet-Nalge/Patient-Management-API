@@ -70,6 +70,15 @@ def get_patient_by_id(patient_id: int = Path(...,
     raise HTTPException(status_code=404, detail=f"given id {patient_id} doesnt exit.!".title())
 
 
+@app.get("/phone/{patient_phone_number}")
+def get_patient_by_phone_number(patient_phone_number: str = Path(...,
+                                                                 description="enter patients phone number".title())):
+    for patient in patient_data.get("patients", []):
+        if patient["contact"].get("phone") == patient_phone_number:
+            return patient
+    raise HTTPException(status_code=404, detail=f"patient with p.number {patient_phone_number} is not found!")
+
+
 @app.post("/add")
 def add_patient(new_patient: Patient):
     data = patient_data
@@ -107,7 +116,6 @@ def delete_patient(patient_id: int = Path(...,
 
 @app.put("/update/{patient_id}")
 def update_patient(patient_id: int, updated_patient: Patient):
-
     for patient in patient_data["patients"]:
         if patient["patient_id"] == patient_id:
             update_fields = updated_patient.model_dump(exclude_unset=True)

@@ -18,18 +18,15 @@
         },
         {
             "patient_id": 2,
-            "name": "Priya Sharma",
-            "age": 32,
-            "weight": 62.3,
+            "name": "someone n",
+            "age": 119,
+            "weight": 80.0,
             "symptoms": [
-                "cough",
-                "sore throat",
-                "body ache"
+                "sleep deprived"
             ],
             "contact": {
-                "phone": "+91-9876543211",
-                "email": "priya.sharma@email.com",
-                "address": "456 Park Street, Kolkata, West Bengal"
+                "address": "123 MG Road, amdika, uae",
+                "phone": "+91-9876543610"
             }
         },
         {
@@ -840,21 +837,6 @@
             ],
             "contact": {
                 "address": "123 MG Road, Mumbai, Maharashtra",
-                "phone": "+91-9876543210"
-            }
-        },
-        {
-            "patient_id": 856,
-            "name": "someone onesome",
-            "age": 120,
-            "weight": 60.0,
-            "symptoms": [
-                "upeer stomach ache",
-                "mild heacdaches",
-                "sleep deprived"
-            ],
-            "contact": {
-                "address": "123 MG Road, amdika, china",
                 "phone": "+91-9876543210"
             }
         }
