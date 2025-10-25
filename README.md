@@ -47,7 +47,7 @@ Method | Endpoint                    | Description
 GET    | /                            | Homepage message
 GET    | /view                        | View all patients
 GET    | /patient/{patient_id}        | Get patient by ID
-GET    | /patient/contact/{phone}     | Get patient by contact number
+GET    | /phone/{patient_phone_number     | Get patient by contact number
 POST   | /add                         | Add a new patient
 PUT    | /update/{patient_id}         | Update patient details
 DELETE | /patients/{patient_id}       | Delete a patient by ID
